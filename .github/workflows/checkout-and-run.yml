@@ -1,0 +1,16 @@
+name: Checkout and Run Example
+
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: List files
+        run: ls -la
+
+      - name: Show Python version
+        run: python --version
