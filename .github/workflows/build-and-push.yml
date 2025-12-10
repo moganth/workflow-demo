@@ -15,5 +15,5 @@ jobs:
       - name: Build image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/demo:${{ github.sha }} .
 
-      - name: Push image
+      - name: Push image to repo
         run: docker push ${{ secrets.DOCKER_USERNAME }}/demo:${{ github.sha }}
